@@ -6,12 +6,12 @@ before_install: true
 
 install:
     - composer install
-    - echo "Salut"
-    - echo "Test"
 
 before_script:
     - phpunit tests
 
 script: true
+    - ./vendor/bin/php-cs-fixer fix --dry-run --diff
+    - phpunit tests
 
 after_script: true
