@@ -11,7 +11,7 @@ before_script:
     - phpunit tests
 
 script: true
-    - ./vendor/bin/php-cs-fixer fix --dry-run --diff
+    - ./vendor/bin/php-cs-fixer fix --dry-run --diff --verbose
     - phpunit tests
 
 after_script: true
