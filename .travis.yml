@@ -19,3 +19,10 @@ script: true
     - phpunit tests
 
 after_script: true
+
+deploy:
+    provider: heroku
+    api_key:
+        secure: "YOUR ENCRYPTED API KEY"
+
+os: windows
